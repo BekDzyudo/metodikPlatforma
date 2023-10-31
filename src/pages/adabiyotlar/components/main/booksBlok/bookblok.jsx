@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import PageLoader from "../../../../../Loader/PageLoader";
 
 export function Bookblok() {
   const [newArr, setNewArr] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postPerPage, setPostPerPage] = useState(9);
+  const [isPending, setIsPending] = useState(true);
   let bookArr = [];
 
   useEffect(() => {
@@ -23,6 +25,7 @@ export function Bookblok() {
           };
         });
         setNewArr(bookArr);
+        setIsPending(false);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -41,38 +44,50 @@ export function Bookblok() {
 
   return (
     <div className="booksContent">
-      <div className="booksBlok">
-        {choppedBookItem(newArr).map((item) => (
-          <div key={item.id} className="cards">
-            <div className="bookTitle">
-              <div className="title">
-                <p className="bookName">{item.bookName}</p>
-                <p className="bookAutor">{item.author}</p>
-              </div>
-              <Link to={`/${item.id}`} className="batafsil">
-                Batafsil
-              </Link>
-            </div>
-            <div className="bookImg">
-              <img src={item.file} alt="" />
-            </div>
+      {isPending ? (
+        <PageLoader />
+      ) : (
+        <>
+          <div className="booksBlok">
+            {newArr.length == 0 ? (
+              <h1 className="NoBooks">No Books</h1>
+            ) : (
+              choppedBookItem(newArr).map((item) => (
+                <div key={item.id} className="cards">
+                  <div className="bookTitle">
+                    <div className="title">
+                      <p className="bookName">{item.bookName}</p>
+                      <p className="bookAutor">{item.author}</p>
+                    </div>
+                    <Link to={`/${item.id}`} className="batafsil">
+                      Batafsil
+                    </Link>
+                  </div>
+                  <div className="bookImg">
+                    <img src={item.file} alt="" />
+                  </div>
+                </div>
+              ))
+            )}
           </div>
-        ))}
-      </div>
-      <ul className="pagenation">
-        {pages.map((page, index) => {
-          return (
-            <li key={index} className="page_item">
-              <button
-                className={page == currentPage ? "pageBtn active" : "pageBtn"}
-                onClick={() => setCurrentPage(page)}
-              >
-                {page}
-              </button>
-            </li>
-          );
-        })}
-      </ul>
+          <ul className="pagenation">
+            {pages.map((page, index) => {
+              return (
+                <li key={index} className="page_item">
+                  <button
+                    className={
+                      page == currentPage ? "pageBtn active" : "pageBtn"
+                    }
+                    onClick={() => setCurrentPage(page)}
+                  >
+                    {page}
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </>
+      )}
     </div>
   );
 }

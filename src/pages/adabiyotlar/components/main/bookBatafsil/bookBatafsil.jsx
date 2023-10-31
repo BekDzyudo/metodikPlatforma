@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./bookBatafsil.scss";
 import { useParams } from "react-router-dom";
-import useGetFetch from "../../../../../hooks/useGetFetch";
+import "bootstrap/dist/css/bootstrap.min.css";
+import PageLoader from "../../../../../Loader/PageLoader";
 
 export function BookBatafsil() {
   const { id } = useParams();
   const [book, setBook] = useState({});
+  const [isPending, setIsPending] = useState(true);
 
   useEffect(() => {
     fetch(
@@ -17,49 +19,56 @@ export function BookBatafsil() {
       })
       .then((data) => {
         setBook(data);
+        setIsPending(false);
       })
       .catch((err) => console.log(err));
   }, []);
 
   return (
     <div className="bookBatafsil">
-      <div className="bookTitle">
-        <p>{book.bookName}</p>
-      </div>
-      <div className="bookContent">
-        <div className="bookImg">
-          <img src={book.file} alt="" />
-        </div>
-        <div className="bookDesc">
-          <p className="title" style={{ marginBottom: "15px" }}>
-            Badiiy adabiyot haqida
-          </p>
-          <p className="titleName">Tibbiy-ommabop nashr</p>
-          <div className="yuklash">
-            <div className="yuklashDesc">
-              <p>Badiiy adabiyot</p>
-              <p>So’ngi o’zgartirilgan sana: 16-May, 2022-yil</p>
-            </div>
-            <button className="yuklashBtn">Yuklab olish</button>
+      {isPending ? (
+        <PageLoader />
+      ) : (
+        <>
+          <div className="bookTitle">
+            <p>{book.bookName}</p>
           </div>
-          <hr className="hr" />
-          <div className="izohlar">
-            <p className="izohTitle">Izohlar</p>
-            <form action="" className="izohForm">
-              <textarea
-                name=""
-                id="matn"
-                cols="30"
-                rows="10"
-                placeholder="Izoh matni..."
-              ></textarea>
-            </form>
-            <div className="saveBlok">
-              <button className="saveBtn">Yuborish</button>
+          <div className="bookContent">
+            <div className="bookImg">
+              <img src={book.file} alt="" />
+            </div>
+            <div className="bookDesc">
+              <p className="title" style={{ marginBottom: "15px" }}>
+                Badiiy adabiyot haqida
+              </p>
+              <p className="titleName">Tibbiy-ommabop nashr</p>
+              <div className="yuklash">
+                <div className="yuklashDesc">
+                  <p>Badiiy adabiyot</p>
+                  <p>So’ngi o’zgartirilgan sana: 16-May, 2022-yil</p>
+                </div>
+                <button className="yuklashBtn">Yuklab olish</button>
+              </div>
+              <hr className="hr" />
+              <div className="izohlar">
+                <p className="izohTitle">Izohlar</p>
+                <form action="" className="izohForm">
+                  <textarea
+                    name=""
+                    id="matn"
+                    cols="30"
+                    rows="10"
+                    placeholder="Izoh matni..."
+                  ></textarea>
+                </form>
+                <div className="saveBlok">
+                  <button className="saveBtn">Yuborish</button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </>
+      )}
     </div>
   );
 }
