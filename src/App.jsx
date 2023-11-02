@@ -1,5 +1,17 @@
 import "./App.css";
+import Contact from "./pages/Contact/Contact";
 import BoshSahifa from "./pages/Home/BoshSahifa";
+import MeyoriySahifa from "./pages/MeyoriyHuquqiyHujjatlar/MeyoriySahifa";
+import Yangiliklar from "./pages/News/yangiliklar";
+import Hududlar from "./pages/ProfessionalTalimMuassasalari/Hududlar";
+import Shahar from "./pages/ProfessionalTalimMuassasalari/Shahar";
+import FanOqituvchi from "./pages/TalimStandartlari/FanOqituvchi/FanOqituvchi";
+import OquvAmaliyot from "./pages/TalimStandartlari/OquvAmaliyot/OquvAmaliyot";
+import OquvMateriallarToplami from "./pages/TalimStandartlari/OquvMateriallarToplami/OquvMateriallarToplami";
+import TalimStandartDetail from "./pages/TalimStandartlari/TalimStandartDetail";
+import TalimStandartSahifa from "./pages/TalimStandartlari/TalimStandartSahifa";
+import UmumKasbiyDetail from "./pages/TalimStandartlari/UmumiyKasbiy/UmumKasbiyDetail";
+import UmumiyKasbiy from "./pages/TalimStandartlari/UmumiyKasbiy/UmumiyKasbiy";
 import { AdabiyotlarAll } from "./pages/adabiyotlar/adabiyotlarAll";
 import { MalumotProvider } from "./pages/profil/components/contexts/editMalumotlarContext";
 import { PortfolioProvider } from "./pages/profil/components/contexts/editPortfolioContext";
@@ -22,7 +34,19 @@ function App() {
         </MalumotProvider>
       </PortfolioProvider> */}
       {/* <AdabiyotlarAll /> */}
-      <BoshSahifa />
+      {/* <BoshSahifa /> */}
+      {/* <MeyoriySahifa /> */}
+      {/* <Yangiliklar /> */}
+      {/* <Hududlar /> */}
+      {/* <Shahar /> */}
+      {/* <TalimStandartSahifa /> */}
+      {/* <TalimStandartDetail /> */}
+      {/* <FanOqituvchi /> */}
+      {/* <OquvAmaliyot /> */}
+      {/* <OquvMateriallarToplami /> */}
+      {/* <UmumiyKasbiy /> */}
+      {/* <UmumKasbiyDetail /> */}
+      <Contact />
     </>
   );
 }
