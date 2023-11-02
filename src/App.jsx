@@ -1,3 +1,5 @@
+import "./App.css";
+import BoshSahifa from "./pages/Home/BoshSahifa";
 import { AdabiyotlarAll } from "./pages/adabiyotlar/adabiyotlarAll";
 import { MalumotProvider } from "./pages/profil/components/contexts/editMalumotlarContext";
 import { PortfolioProvider } from "./pages/profil/components/contexts/editPortfolioContext";
@@ -19,7 +21,8 @@ function App() {
           <Profil />
         </MalumotProvider>
       </PortfolioProvider> */}
-      <AdabiyotlarAll/>
+      {/* <AdabiyotlarAll /> */}
+      <BoshSahifa />
     </>
   );
 }

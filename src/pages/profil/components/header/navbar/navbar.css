@@ -1,6 +1,7 @@
 .profilHeader{
     width: 100%;
     margin-bottom: 100px;
+    margin-top: 0px;
 }
   ul {
     display: flex;

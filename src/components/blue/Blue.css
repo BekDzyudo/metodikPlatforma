@@ -1,0 +1,14 @@
+.hududblue {
+    position: relative;
+  }
+  .blue {
+    background-image: url(../../images/img/blue.png);
+    height: 80em;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+  }
+  

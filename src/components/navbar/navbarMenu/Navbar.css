@@ -1,0 +1,22 @@
+nav {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  ul {
+    display: flex;
+    gap: 30px;
+    padding: 0;
+  }
+  
+  li .nav-link {
+    color: #fff;
+    font-size: 17.7px;
+    font-weight: 400;
+    padding: 0;
+  }
+  
+  .nav-menu a:hover,
+  .nav-menu .active {
+    color: #05cbd6;
+  }
+  
