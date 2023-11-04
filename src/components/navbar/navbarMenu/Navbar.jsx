@@ -13,7 +13,7 @@ function Navbar() {
             </NavLink>
           </li>
           <li>
-            <NavLink className="nav-link" to="/Meyoriy">
+            <NavLink className="nav-link" to="/MeyoriySahifa">
               Me’yoriy-huquqiy hujjatlar
             </NavLink>
           </li>

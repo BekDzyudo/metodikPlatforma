@@ -70,10 +70,6 @@ function Contact() {
           <div className="gmap_canvas">
             <iframe
               class="gmap_iframe"
-              frameborder="0"
-              scrolling="no"
-              marginheight="0"
-              marginwidth="0"
               title="title_contact"
               src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=uzbekston toshkent olmazor&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             ></iframe>
