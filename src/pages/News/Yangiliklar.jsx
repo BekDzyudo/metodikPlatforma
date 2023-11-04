@@ -8,10 +8,10 @@ import imaGe1 from "../../images/img/new1.png";
 import "./Yangiliklar.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination, A11y } from "swiper/modules";
-import "swiper/css"
-import "swiper/css/autoplay"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
+import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 function Yangiliklar() {
   return (
@@ -44,32 +44,34 @@ function Yangiliklar() {
               </div>
               <div className="col-5">
                 <div className="mindostext">
-                  <div className="frame">
-                    <p>15.09.2023</p>
-                  </div>
-                  <p className="titlemind">
-                    Сhet eldagi diplomatik vakolatxonalar ham professional
-                  </p>
-                  <p className="titlemini">
-                    2023-yil 19-iyul kuni Oly ta’lim, fan va innovatsiyalar
-                    vazirligi huzuridagi Pedagogik innovatsiyalar instituti va
-                    “Qо‘qon mexanika zavodi” Aksiyadorlik jamiyati о‘rtasida
-                    hamkorlik shartnomasi imzolandi. Unda Pedagogik
-                    innovatsiyalar instituti va “Qо‘qon mexanika zavodi”
-                    Aksiyadorlik jamiyati rahbar hamda mas’ul xodimlari ishtirok
-                    etdi. Mazkur uchrashuv va shartnomaga kо‘ra, hamkorlikda
-                    tegishli kasb va mutaxassisliklar hamda qisqa muddatli о‘quv
-                    kurslari bо‘yicha ta’lim dasturlarini ishlab chiqish,
-                    о‘quv-uslubiy ishlarni yо‘lga qо‘yish, о‘zaro tajriba
-                    almashish, о‘quvchilarning ishlab chiqarish va diplom oldi
-                    amaliyotlarini tashkil etish, maxsus fanlar о‘qituvchilari
-                    va ishlab chiqarish ta’limi ustalarining amaliy
-                    kо‘nikmalarini oshirish, ilmiy tadqiqot ishlarini yо‘lga
-                    qо‘yish, qо‘shma innovatsion loyihalarni amalga oshirish
-                    orqali professional ta’lim tizimini yanada rivojlantirishga
-                    qaratilgan bir qator ishlarni amalga oshirishga kelishib
-                    olindi.
-                  </p>
+                  <>
+                    <div className="frame">
+                      <p>15.09.2023</p>
+                    </div>
+                    <p className="titlemind">
+                      Сhet eldagi diplomatik vakolatxonalar ham professional
+                    </p>
+                    <p className="titlemini">
+                      2023-yil 19-iyul kuni Oly ta’lim, fan va innovatsiyalar
+                      vazirligi huzuridagi Pedagogik innovatsiyalar instituti va
+                      “Qо‘qon mexanika zavodi” Aksiyadorlik jamiyati о‘rtasida
+                      hamkorlik shartnomasi imzolandi. Unda Pedagogik
+                      innovatsiyalar instituti va “Qо‘qon mexanika zavodi”
+                      Aksiyadorlik jamiyati rahbar hamda mas’ul xodimlari
+                      ishtirok etdi. Mazkur uchrashuv va shartnomaga kо‘ra,
+                      hamkorlikda tegishli kasb va mutaxassisliklar hamda qisqa
+                      muddatli о‘quv kurslari bо‘yicha ta’lim dasturlarini
+                      ishlab chiqish, о‘quv-uslubiy ishlarni yо‘lga qо‘yish,
+                      о‘zaro tajriba almashish, о‘quvchilarning ishlab chiqarish
+                      va diplom oldi amaliyotlarini tashkil etish, maxsus fanlar
+                      о‘qituvchilari va ishlab chiqarish ta’limi ustalarining
+                      amaliy kо‘nikmalarini oshirish, ilmiy tadqiqot ishlarini
+                      yо‘lga qо‘yish, qо‘shma innovatsion loyihalarni amalga
+                      oshirish orqali professional ta’lim tizimini yanada
+                      rivojlantirishga qaratilgan bir qator ishlarni amalga
+                      oshirishga kelishib olindi.
+                    </p>
+                  </>
                   <button className="mindbtn">
                     <Link>Batafsil</Link>
                   </button>

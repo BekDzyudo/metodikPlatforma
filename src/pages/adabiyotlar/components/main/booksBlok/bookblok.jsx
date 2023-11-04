@@ -53,13 +53,13 @@ export function Bookblok() {
               <h1 className="NoBooks">No Books</h1>
             ) : (
               choppedBookItem(newArr).map((item) => (
-                <div key={item.id} className="cards">
+                <div key={item.id} className="cardss">
                   <div className="bookTitle">
                     <div className="title">
                       <p className="bookName">{item.bookName}</p>
                       <p className="bookAutor">{item.author}</p>
                     </div>
-                    <Link to={`/${item.id}`} className="batafsil">
+                    <Link to="/Adabiyotlar/book" className="batafsil">
                       Batafsil
                     </Link>
                   </div>

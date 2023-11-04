@@ -1,13 +1,15 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./bookBatafsil.scss";
 import { useParams } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PageLoader from "../../../../../Loader/PageLoader";
+import img from "../../../../../images/img/qiz.png";
 
 export function BookBatafsil() {
   const { id } = useParams();
   const [book, setBook] = useState({});
   const [isPending, setIsPending] = useState(true);
+  console.log(book);
 
   useEffect(() => {
     fetch(
@@ -31,11 +33,11 @@ export function BookBatafsil() {
       ) : (
         <>
           <div className="bookTitle">
-            <p>{book.bookName}</p>
+            <p>{book?.bookName ? book.bookName : <p>nimadir</p>}</p>
           </div>
           <div className="bookContent">
             <div className="bookImg">
-              <img src={book.file} alt="" />
+              <img src={book?.file ? book.file : img} alt="" />
             </div>
             <div className="bookDesc">
               <p className="title" style={{ marginBottom: "15px" }}>

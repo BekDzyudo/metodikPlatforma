@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./meyoriy.css";
 import nizom from "../../images/img/nizom.jpg";
 import PagenationWhite from "../../components/pagenation/PagenationWhite";
+import MeyoriySidebar from "./components/MeyoriySidebar";
 
 function Nizomlar() {
   return (
@@ -28,22 +29,7 @@ function Nizomlar() {
       <div className="row">
         <div className="col-12">
           <div className=" farmon_body">
-            <div className="farmon_left">
-              <div className="col">
-                <div className="farmon_card">
-                  <Link className="farmon_title">Prezident Farmonlari</Link>
-                  <Link to="vazirlarQarori" className="farmon_title">
-                    Vazirlar Mahkamasi qarorlari
-                  </Link>
-                  <Link to="vazirlarBuyrugi" className="farmon_title">
-                    Vazirlig buyruqlari ta'lim
-                  </Link>
-                  <Link to="nizomlar" className="farmon_title active">
-                    Nizomlar
-                  </Link>
-                </div>
-              </div>
-            </div>
+            <MeyoriySidebar />
             <div className="col-10 farmon_right">
               <div className="col-3 farmon_right-img">
                 <img src={nizom} alt="farmon" />

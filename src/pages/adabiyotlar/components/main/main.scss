@@ -96,12 +96,12 @@
                 font-weight: 700;
                 opacity: 0.5;
             }
-            .cards:hover{
+            .cardss:hover{
                 background: rgba(211, 210, 210, 0.45);
                 transform: scale(1.01);
                 
             }
-            .cards{
+            .cardss{
                 position: relative;
                 top: 0;
                 left: 0;
@@ -109,7 +109,7 @@
                 border-radius: 25px;
                 background: rgba(243, 243, 243, 0.45);
                 padding: 15px;
-                display: flex ;
+                display: flex !important;
                 column-gap: 10px;
                 
                 .bookTitle{

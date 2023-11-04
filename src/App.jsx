@@ -25,6 +25,10 @@ import PrezidentFarmoni from "./pages/MeyoriyHuquqiyHujjatlar/PrezidentFarmoni";
 import VazirlarQarori from "./pages/MeyoriyHuquqiyHujjatlar/VazirlarQarori";
 import VazirlarBuyrugi from "./pages/MeyoriyHuquqiyHujjatlar/VazirlarBuyrugi";
 import Nizomlar from "./pages/MeyoriyHuquqiyHujjatlar/Nizomlar";
+import ProfessionalTalimMuassasa from "./pages/ProfessionalTalimMuassasalari/ProfessionalTalimMuassasa";
+import LayoutTalimStandart from "./pages/TalimStandartlari/LayoutTalimStandart";
+import { MainAdabiyot } from "./pages/adabiyotlar/components/main/main";
+import { BookBatafsil } from "./pages/adabiyotlar/components/main/bookBatafsil/bookBatafsil";
 
 function App() {
   const routes = createBrowserRouter([
@@ -53,6 +57,56 @@ function App() {
           element: <Nizomlar />,
         },
       ],
+    },
+    {
+      path: "Professional-Talim-Muassasalari",
+      element: <ProfessionalTalimMuassasa />,
+      children: [
+        {
+          index: true,
+          element: <Hududlar />,
+        },
+        {
+          path: "shahar",
+          element: <Shahar />,
+        },
+      ],
+    },
+    {
+      path: "Talim-Standartlari-Fanlar",
+      element: <LayoutTalimStandart />,
+      children: [
+        {
+          index: true,
+          element: <TalimStandartSahifa />,
+        },
+        {
+          path: "detail",
+          element: <TalimStandartDetail />,
+        },
+      ],
+    },
+    {
+      path: "Adabiyotlar",
+      element: <AdabiyotlarAll />,
+      children: [
+        {
+          index: true,
+          element: <MainAdabiyot />,
+        },
+        {
+          path: ":id",
+          element: <BookBatafsil />,
+        },
+      ],
+    },
+    {
+      path: "Yangiliklar",
+      element: <Yangiliklar />,
+    },
+    {
+      path: "Contact",
+      element: <Contact />,
     },
   ]);
 

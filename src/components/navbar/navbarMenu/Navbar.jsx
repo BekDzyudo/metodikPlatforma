@@ -18,22 +18,22 @@ function Navbar() {
             </NavLink>
           </li>
           <li>
-            <NavLink className="nav-link" to="/Muassasa">
+            <NavLink className="nav-link" to="/Professional-Talim-Muassasalari">
               Professional ta'lim muassasalari
             </NavLink>
           </li>
           <li>
-            <NavLink className="nav-link" to="/Talim">
+            <NavLink className="nav-link" to="/Talim-Standartlari-Fanlar">
               Ta'lim standartlari va fanlar
             </NavLink>
           </li>
           <li>
-            <NavLink className="nav-link" to="/Adabiyot">
+            <NavLink className="nav-link" to="/Adabiyotlar">
               Adabiyotlar
             </NavLink>
           </li>
           <li>
-            <NavLink className="nav-link" to="/Yangilik">
+            <NavLink className="nav-link" to="/Yangiliklar">
               Yangiliklar
             </NavLink>
           </li>

@@ -10,7 +10,7 @@ nav {
   
   li .nav-link {
     color: #fff;
-    font-size: 17.7px;
+    font-size: 17.6px !important;
     font-weight: 400;
     padding: 0;
   }

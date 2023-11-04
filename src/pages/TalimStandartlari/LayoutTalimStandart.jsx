@@ -1,19 +1,20 @@
 import React from "react";
-import "./adabiyotlarAll.scss";
+
+import "./talim.css";
 import { Outlet } from "react-router-dom";
 import TopNavbar from "../../components/navbar/topNavbar/TopNavbar";
 import Navbar from "../../components/navbar/navbarMenu/Navbar";
 import FooterWhite from "../../components/footer/FooterWhite";
 
-export function AdabiyotlarAll() {
+function LayoutTalimStandart() {
   return (
-    <div className="adabiyotlar_Bg">
+    <div className="talim">
       <TopNavbar />
       <Navbar />
-      <div className="container">
-        <Outlet />
-      </div>
+      <Outlet />
       <FooterWhite />
     </div>
   );
 }
+
+export default LayoutTalimStandart;

@@ -68,7 +68,7 @@
     font-size: 14px;
     font-weight: 600;
   }
-  .farmon_card .farmon_title.active {
+  .farmon_card .farmon_title:focus {
     color: #05cbd6;
   }
   

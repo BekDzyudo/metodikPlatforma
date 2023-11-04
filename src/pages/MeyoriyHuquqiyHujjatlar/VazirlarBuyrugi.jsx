@@ -4,6 +4,7 @@ import "./meyoriy.css";
 import buyruq from "../../images/img/buyruq.jpg";
 import { Link } from "react-router-dom";
 import PagenationWhite from "../../components/pagenation/PagenationWhite";
+import MeyoriySidebar from "./components/MeyoriySidebar";
 
 function VazirlarBuyrugi() {
   return (
@@ -29,22 +30,7 @@ function VazirlarBuyrugi() {
       <div className="row">
         <div className="col-12">
           <div className=" farmon_body">
-            <div className="farmon_left">
-              <div className="col">
-                <div className="farmon_card">
-                  <Link className="farmon_title">Prezident Farmonlari</Link>
-                  <Link to="vazirlarQarori" className="farmon_title ">
-                    Vazirlar Mahkamasi qarorlari
-                  </Link>
-                  <Link to="vazirlarBuyrugi" className="farmon_title active">
-                    Vazirlig buyruqlari ta'lim
-                  </Link>
-                  <Link to="nizomlar" className="farmon_title">
-                    Nizomlar
-                  </Link>
-                </div>
-              </div>
-            </div>
+            <MeyoriySidebar />
             <div className="col-10 farmon_right">
               <div className="col-3 farmon_right-img">
                 <img src={buyruq} alt="farmon" />
