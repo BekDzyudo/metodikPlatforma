@@ -108,35 +108,36 @@ function App() {
       path: "Contact",
       element: <Contact />,
     },
+    {
+      path: "/Profil",
+      element: <Profil />,
+    },
+    {
+      path: "regMalumotlar",
+      element: <RegMalumotlar />,
+    },
+    {
+      path: "regPortfolio",
+      element: <RegPortfolio />,
+    },
+    {
+      path: "regTeacherTitle",
+      element: <RegTeacherTitle />,
+    },
+    {
+      path: "regTeacherFiles",
+      element: <RegTeacherFiles />,
+    },
   ]);
 
   return (
     <RouterProvider router={routes} />
 
-    // <>
-    //   {/* <RegMalumotlar/> */}
-    //   {/* <RegPortfolio/> */}
-    //   {/* <RegTeacherTitle/> */}
-    //   {/* <RegTeacherFiles/> */}
-    //   {/* <PortfolioProvider>
-    //     <MalumotProvider>
-    //       <Profil />
-    //     </MalumotProvider>
-    //   </PortfolioProvider> */}
-    //   {/* <AdabiyotlarAll /> */}
-    //   {/* <BoshSahifa /> */}
-    //   {/* <MeyoriySahifa /> */}
-    //   {/* <Yangiliklar /> */}
-    //   {/* <Hududlar /> */}
-    //   {/* <Shahar /> */}
-    //   {/* <TalimStandartSahifa /> */}
-    //   {/* <TalimStandartDetail /> */}
     //   {/* <FanOqituvchi /> */}
     //   {/* <OquvAmaliyot /> */}
     //   {/* <OquvMateriallarToplami /> */}
     //   {/* <UmumiyKasbiy /> */}
     //   {/* <UmumKasbiyDetail /> */}
-    //   {/* <Contact /> */}
     // </>
   );
 }
