@@ -128,6 +128,10 @@ function App() {
       path: "regTeacherFiles",
       element: <RegTeacherFiles />,
     },
+    {
+      path: "*",
+      element: <h1>not fount</h1>,
+    },
   ]);
 
   return (
